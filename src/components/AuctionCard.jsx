@@ -126,7 +126,7 @@ const AuctionCard = ({ item }) => {
     const [packageList, setPackageList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/package/allUnsoldPackages')
+        fetch('https://balikliova-mezat-g7.herokuapp.com/package/allUnsoldPackages')
             .then(res => res.json())
             .then(
                 (result) => {
@@ -135,7 +135,7 @@ const AuctionCard = ({ item }) => {
     });
 
     const startAuction = (e) => {
-        fetch(`http://localhost:8080/auction/start/${item.id}`, {
+        fetch(`https://balikliova-mezat-g7.herokuapp.com/auction/start/${item.id}`, {
             method: 'PUT',
         }).then((response) => {
             response.json()
@@ -148,7 +148,7 @@ const AuctionCard = ({ item }) => {
 
 
     const endAuction = (e) => {
-        fetch(`http://localhost:8080/auction/end/${item.id}`, {
+        fetch(`https://balikliova-mezat-g7.herokuapp.com/auction/end/${item.id}`, {
             method: 'PUT',
         }).then((response) => {
             response.json()
@@ -160,7 +160,7 @@ const AuctionCard = ({ item }) => {
     }
 
     const cancelAuction = (e) => {
-        fetch(`http://localhost:8080/auction/cancel/${item.id}`, {
+        fetch(`https://balikliova-mezat-g7.herokuapp.com/auction/cancel/${item.id}`, {
             method: 'PUT',
         }).then((response) => {
             response.json()

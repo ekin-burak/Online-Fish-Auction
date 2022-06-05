@@ -24,7 +24,7 @@ export function LoginForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:8080/auth/login', {
+    fetch('https://balikliova-mezat-g7.herokuapp.com/auth/login', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

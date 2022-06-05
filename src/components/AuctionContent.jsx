@@ -176,7 +176,7 @@ const Th = styled.th`
 const AuctionContent = () => {
 
     const auction_id = useParams();
-    const url = 'http://localhost:8080/auction/getFishPackage/' + auction_id.auctionId;
+    const url = 'https://balikliova-mezat-g7.herokuapp.com/auction/getFishPackage/' + auction_id.auctionId;
 
     //const { data: fishPackage, error, isPending } = useFetch(url);
     const [fishPackage, setFishPackage] = useState([]);
@@ -207,7 +207,7 @@ const AuctionContent = () => {
     const handleClickPickFish = (e) => {
         e.preventDefault();
 
-        const url = 'http://localhost:8080/auction/getCurrentFish/' + currentFishId;
+        const url = 'https://balikliova-mezat-g7.herokuapp.com/auction/getCurrentFish/' + currentFishId;
 
         fetch(url)
             .then(response => response.json())
@@ -226,7 +226,7 @@ const AuctionContent = () => {
     const handleClickSellFish = (e) => {
         e.preventDefault();
 
-        fetch('http://localhost:8080/auctionManager/sellPackage/' + currentFish.id, {
+        fetch('https://balikliova-mezat-g7.herokuapp.com/auctionManager/sellPackage/' + currentFish.id, {
             method: 'PUT',
             headers: { "Content-Type": "application/json" },
 
@@ -248,7 +248,7 @@ const AuctionContent = () => {
         e.preventDefault();
 
         if (newBidValue > maxBid) {
-            fetch('http://localhost:8080/auctionManager/bid', {
+            fetch('https://balikliova-mezat-g7.herokuapp.com/auctionManager/bid', {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

@@ -72,7 +72,7 @@ function PasswordChangeForm(props) {
             setNotif("Şifreler uyuşmuyor");
             setNotChanged(true);
         } else {
-            fetch('http://localhost:8080/auth/changePass/' + props.userId, {
+            fetch('https://balikliova-mezat-g7.herokuapp.com/auth/changePass/' + props.userId, {
                 method: 'PUT',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

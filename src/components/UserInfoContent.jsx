@@ -116,7 +116,7 @@ const UserInfo = () => {
 
   //initialize userInfo
   useEffect(() => {
-    fetch('http://localhost:8080/users/mail/' + mail)
+    fetch('https://balikliova-mezat-g7.herokuapp.com/users/mail/' + mail)
       .then(response => response.json())
       .then(data => {
         setUserInfo(data);
@@ -124,7 +124,7 @@ const UserInfo = () => {
   }, [])
 
   useEffect(() => {
-    fetch('http://localhost:8080/package/' + id)
+    fetch('https://balikliova-mezat-g7.herokuapp.com/package/' + id)
       .then(response => response.json())
       .then(data => {
         setMyFishes(data);

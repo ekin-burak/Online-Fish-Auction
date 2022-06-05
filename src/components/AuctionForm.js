@@ -34,7 +34,7 @@ function AuctionForm(props) {
 
         //
 
-        fetch('http://localhost:8080/auction', {
+        fetch('https://balikliova-mezat-g7.herokuapp.com/auction', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

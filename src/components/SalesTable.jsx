@@ -65,7 +65,7 @@ const FishTable = () => {
   const [currentFishList, setCurrentFishList] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/package/allSoldPackage`)
+    fetch(`https://balikliova-mezat-g7.herokuapp.com/package/allSoldPackage`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -80,7 +80,7 @@ const FishTable = () => {
 
   const [userName, setUserName] = useState("");
   const getName = (id) => {
-    fetch(`http://localhost:8080/users/${id}`)
+    fetch(`https://balikliova-mezat-g7.herokuapp.com/users/${id}`)
       .then(
         (result) => {
           setUserName(result)

@@ -15,7 +15,7 @@ const FishForm = () => {
 
   const [currentDate, setCurrentDate] = useState('');
   useEffect(() => {
-    fetch('http://localhost:8080/auction/getCurrentAuction')
+    fetch('https://balikliova-mezat-g7.herokuapp.com/auction/getCurrentAuction')
       .then(res => res.json())
       .then(
         (result) => {
@@ -31,7 +31,7 @@ const FishForm = () => {
     e.preventDefault();
     const newFish = { species, kilogram, floorPrice, sellerName };
 
-    fetch('http://localhost:8080/auction/addFish', {
+    fetch('https://balikliova-mezat-g7.herokuapp.com/auction/addFish', {
       method: 'PUT',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

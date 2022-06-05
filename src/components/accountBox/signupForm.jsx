@@ -32,7 +32,7 @@ export function SignupForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:8080/auth/register', {
+    fetch('https://balikliova-mezat-g7.herokuapp.com/auth/register', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

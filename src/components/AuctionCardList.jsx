@@ -29,7 +29,7 @@ const AuctionCardList = () => {
     const [auctionList, setAuctionList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/auction/getSortedAuctions')
+        fetch('https://balikliova-mezat-g7.herokuapp.com/auction/getSortedAuctions')
             .then(res => res.json())
             .then(
                 (result) => {
