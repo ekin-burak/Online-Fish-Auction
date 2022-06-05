@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import AuctionList from "./pages/AuctionList";
 import AuctionFishTable from './pages/AuctionFishTable';
 import Auction from './pages/Auction';
-import AddFish from './pages/AddFish';
+import AddFish from './pages/Addfish';
 import Login from "./pages/Login";
 import UserInfo from "./pages/UserInfo";
 import React from 'react';
@@ -22,7 +22,7 @@ function App() {
         <Route exact path='/login'
           element={localStorage.getItem("currentUser") != null ? <Navigate to="/" /> : <Login />}>
         </Route>
-        <Route exact path='/addFish' element={localStorage.getItem("currentUser") != null ? <AddFish /> : <Navigate to="/login" />}></Route>
+        <Route exact path='/addfish' element={localStorage.getItem("currentUser") != null ? <AddFish /> : <Navigate to="/login" />}></Route>
         <Route exact path='/userInfo' element={localStorage.getItem("currentUser") != null ? <UserInfo /> : <Navigate to="/login" />}></Route>
         <Route exact path='/sales' element={localStorage.getItem("currentUser") != null ? <SalesPage /> : <Navigate to="/login" />}></Route>
         
