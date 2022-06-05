@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import AuctionCardList from '../components/AuctionCardList'
 import AuctionForm from '../components/AuctionForm'
 import styled from "styled-components";
 
-const AuctionContainer=styled.div`
+const AuctionContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,9 @@ const AuctionList = () => {
       <Navbar />
       <AuctionCardList />
       <AuctionContainer>
-        <AuctionButton onClick={() => setbuttonAuctionForm(true)}>Yeni Mezat Ekle</AuctionButton>
+        {(localStorage.getItem("userRole") === "ROLE_ADMIN") ? <AuctionButton onClick={() => setbuttonAuctionForm(true)}>Yeni Mezat Ekle</AuctionButton>
+          : ""}
+
         <AuctionForm trigger={buttonAuctionForm} setTrigger={setbuttonAuctionForm}>
         </AuctionForm>
       </AuctionContainer>
